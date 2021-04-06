@@ -4,10 +4,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.wjj</groupId>
-    <artifactId>Tjisejavamaven0406</artifactId>
+    <groupId>com.yuw</groupId>
+    <artifactId>tjise2javawebmaven20210406</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>Tjisejavamaven0406</name>
+    <name>tjise2javawebmaven20210406</name>
     <packaging>war</packaging>
 
     <properties>
@@ -17,6 +17,41 @@
     </properties>
 
     <dependencies>
+
+        <!--    maven 依赖定义
+    各个引入的jar的依赖去maven中心仓库查找：
+    https://mvnrepository.com/  查找
+    -->
+        <!--        dbcp2数据源-->
+        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-dbcp2 -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-dbcp2</artifactId>
+            <version>2.8.0</version>
+        </dependency>
+
+        <!--        dbutils的依赖-->
+        <!-- https://mvnrepository.com/artifact/commons-dbutils/commons-dbutils -->
+        <dependency>
+            <groupId>commons-dbutils</groupId>
+            <artifactId>commons-dbutils</artifactId>
+            <version>1.7</version>
+        </dependency>
+        <!--mysql数据库驱动-->
+        <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.19</version>
+        </dependency>
+        <!--oralce数据库驱动-->
+        <!-- https://mvnrepository.com/artifact/com.oracle.database.jdbc/ojdbc6 -->
+        <dependency>
+            <groupId>com.oracle.database.jdbc</groupId>
+            <artifactId>ojdbc6</artifactId>
+            <version>11.2.0.4</version>
+        </dependency>
+
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>

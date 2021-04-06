@@ -7,7 +7,7 @@
         <packaging>war</packaging>
       </options>
     </properties>
-    <root id="archive" name="Tjisejavamaven0406-1.0-SNAPSHOT.war">
+    <root id="archive" name="tjise2javawebmaven20210406-1.0-SNAPSHOT.war">
       <element id="artifact" artifact-name="Tjisejavamaven0406:war exploded" />
     </root>
   </artifact>
