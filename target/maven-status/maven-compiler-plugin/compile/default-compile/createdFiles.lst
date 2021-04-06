@@ -4,7 +4,6 @@ com\wjj\bean\UserInfoBean.class
 com\wjj\dao\DBCPDataSource.class
 com\wjj\control\LoginServlet.class
 com\wjj\control\UserInfoAddServlet.class
-com\wjj\Tjisejavamaven0406\HelloServlet.class
 com\wjj\filter\EncodingFilter.class
 com\wjj\modal\UserModel.class
 com\wjj\utils\MyUtils.class

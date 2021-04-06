@@ -4,12 +4,30 @@ package com.wjj.modal;
 import com.wjj.bean.UserInfoBean;
 import com.wjj.dao.DBProvider;
 import com.wjj.utils.MyUtils;
+import org.apache.commons.dbutils.handlers.BeanListHandler;
 import org.apache.commons.dbutils.handlers.MapListHandler;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
 public class UserModel {
+
+
+    /**
+     * 查询所有的用户信息
+     *
+     * @return 查询结果集
+     */
+    public List<UserInfoBean> queryUserInfoAll() {
+        List<UserInfoBean> lst = new ArrayList<>();
+        // 查询语句
+        String strSql = " select * from userinfo order by userid desc ";
+        lst = MyUtils.getNewInstance(DBProvider.class).query(strSql, new BeanListHandler<>(UserInfoBean.class));
+        return lst;
+    }
+
+
 
     /**
      * 用户信息新增

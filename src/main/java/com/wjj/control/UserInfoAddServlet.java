@@ -8,6 +8,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
+import java.util.List;
 
 @WebServlet(name = "UserInfoAddServlet", value = "/UserInfoAddServlet")
 public class UserInfoAddServlet extends HttpServlet {
@@ -36,6 +37,11 @@ public class UserInfoAddServlet extends HttpServlet {
         // 4、数据保存成功之后，跳转的保存结果显示页面
         if (i > 0) {
             // 保存成功，跳转到成功显示页面
+            // 调用Model层进行查询操作，将用户数据查询出来，保存到session中
+            List<UserInfoBean> lstUsers = MyUtils.getNewInstance(UserModel.class).queryUserInfoAll();
+            // 在跳转之前，需要将显示在成功页面的数据进行session缓存
+            request.getSession().setAttribute("lstUsers", lstUsers);
+
             request.getRequestDispatcher("WEB-INF/viewpages/userInfoB/UserInfoAddDetail.jsp").forward(request, response);
         } else {
             // 保存失败，继续跳回新增页面
