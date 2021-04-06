@@ -1,0 +1,2 @@
+# Tjisejavamaven0406
+/**      * 查询所有的用户信息      *      * @return 查询结果集      */     public List&lt;UserInfoBean> queryUserInfoAll() {         List&lt;UserInfoBean> lst = new ArrayList&lt;>();         // 查询语句         String strSql = " select * from userinfo order by userid desc ";         lst = MyUtils.getNewInstance(DBProvider.class).query(strSql, new BeanListHandler&lt;>(UserInfoBean.class));         return lst;     }
